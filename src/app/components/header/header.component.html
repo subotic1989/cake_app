@@ -1,0 +1,42 @@
+<header
+  #myElement
+  class="header"
+  id="header"
+  [ngClass]="{ 'scroll-header': scrollY >= 50 }"
+>
+  <nav class="nav container">
+    <a href="#" class="nav__logo"> Cake Craze </a>
+
+    <div class="nav__menu" id="nav-menu" [ngClass]="{ 'show-menu': isOpen }">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#home" class="nav__link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#about" class="nav__link">Recipes</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#trick" class="nav__link">Candy</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#new" class="nav__link">New</a>
+        </li>
+
+        <a href="#" class="button button--ghost">Order</a>
+      </ul>
+
+      <div class="nav__close icon" id="nav-close" (click)="isOpen = !isOpen">
+        <img src="../../../assets/img/icons/close.svg" alt="close" />
+      </div>
+
+      <img src="../../../assets/img/bg/bg-2.png" alt="" class="nav__img" />
+    </div>
+
+    <div class="nav__toggle icon" id="nav-toggle" (click)="isOpen = !isOpen">
+      <img src="../../../assets/img/icons/grid.svg" alt="grid" />
+    </div>
+  </nav>
+</header>
